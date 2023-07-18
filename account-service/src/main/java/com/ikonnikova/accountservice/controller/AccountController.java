@@ -23,7 +23,7 @@ public class AccountController {
         return new AccountResponseDto(accountService.getAccountById(accountId));
     }
 
-    @PostMapping("/accounts")
+    @PostMapping("/")
     public Long createAccount(@RequestBody AccountRequestDTO accountRequestDTO) {
         return accountService.createAccount(accountRequestDTO.getName(),
                 accountRequestDTO.getEmail(),
